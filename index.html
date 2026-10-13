@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App - Pertemuan 5</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="weather-app">
+
+        <section class="weather-card">
+
+            <div class="header">
+                <p class="subtitle">PEMROGRAMAN WEB</p>
+                <h1>Weather App</h1>
+                <p class="description">
+                    Cari informasi cuaca kota secara real-time
+                </p>
+            </div>
+
+            <!-- Search -->
+            <form id="searchForm" class="search-form">
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Masukkan nama kota..."
+                    autocomplete="off"
+                >
+
+                <button type="submit" id="searchButton">
+                    Cari
+                </button>
+
+            </form>
+
+            <!-- Loading -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Memuat data cuaca...</p>
+            </div>
+
+            <!-- Error -->
+            <div id="error" class="error hidden">
+                <p id="errorMessage"></p>
+            </div>
+
+            <!-- Weather Result -->
+            <section id="weatherResult" class="weather-result hidden">
+
+                <div class="location">
+                    <h2 id="cityName">Medan</h2>
+                    <p id="countryName"></p>
+                </div>
+
+                <div class="weather-main">
+
+                    <img
+                        id="weatherIcon"
+                        src=""
+                        alt="Ikon cuaca"
+                    >
+
+                    <div class="temperature-container">
+                        <p id="temperature" class="temperature">
+                            --°C
+                        </p>
+
+                        <p id="description">
+                            --
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="weather-details">
+
+                    <div class="detail-card">
+                        <span>💧</span>
+                        <p>Kelembaban</p>
+                        <strong id="humidity">--%</strong>
+                    </div>
+
+                    <div class="detail-card">
+                        <span>💨</span>
+                        <p>Kecepatan Angin</p>
+                        <strong id="windSpeed">-- m/s</strong>
+                    </div>
+
+                    <div class="detail-card">
+                        <span>🌡️</span>
+                        <p>Terasa Seperti</p>
+                        <strong id="feelsLike">--°C</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Search History -->
+            <section id="historySection" class="history-section hidden">
+
+                <h3>Riwayat Pencarian</h3>
+
+                <div id="historyList" class="history-list"></div>
+
+                <button
+                    type="button"
+                    id="clearHistory"
+                    class="clear-history"
+                >
+                    Hapus Riwayat
+                </button>
+
+            </section>
+
+            <footer>
+                <p>Weather App • Tugas Rutin 5</p>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
